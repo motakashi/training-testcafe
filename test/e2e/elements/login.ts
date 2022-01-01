@@ -1,14 +1,14 @@
 import { Selector } from 'testcafe';
 import xpathSelector from '../lib/xpath-selector';
 
-export class  Login{
+export class Login{
 
-  static YIDテキストボックス: string = "#username";
+  YIDテキストボックス: string = "#username";
 
-  static YID入力後の次へボタン: string = "#btnNext";
+  YID入力後の次へボタン: string = "#btnNext";
 
-  static パスワードテキストボックス: string = "#passwd";
+  パスワードテキストボックス: string = "#passwd";
 
-  static ログインボタン: string = "#btnSubmit";
+  ログインボタン: string = "#btnSubmit";
 
 }
