@@ -4,7 +4,7 @@
   "description": "testcafeの練習",
   "main": "index.js",
   "scripts": {
-    "test:e2e": "testcafe chrome test/e2e/tests/sample.test.ts"
+    "test:e2e": "testcafe chrome test/e2e/tests/login.test.ts"
   },
   "repository": {
     "type": "git",
