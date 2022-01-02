@@ -1,17 +1,15 @@
 import { t, Selector } from 'testcafe';
 import {Login} from "../elements/login";
 
-export class LoginTestCase{
+export async function ログインしていない状態のときログイン画面が表示されログインすることができる() {
 
-	testId:any = require('./../user/testId.json');
+  const testId:any = require('./../user/testId.json');
 
-	elementLogin = new Login();
+  const elementLogin = new Login();
 
-	async ログインしていない状態のときログイン画面が表示されログインすることができる(){
-    await t
-      .typeText(this.elementLogin.YIDテキストボックス , this.testId.yid)
-      .click(this.elementLogin.YID入力後の次へボタン)
-      .typeText(this.elementLogin.パスワードテキストボックス, this.testId.password)
-      .click(this.elementLogin.ログインボタン)
-  };
+  await t
+    .typeText(elementLogin.YIDテキストボックス, testId.yid)
+    .click(elementLogin.YID入力後の次へボタン)
+    .typeText(elementLogin.パスワードテキストボックス, testId.password)
+    .click(elementLogin.ログインボタン)
 }
