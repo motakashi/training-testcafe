@@ -4,6 +4,12 @@
   "description": "testcafeの練習",
   "main": "index.js",
   "scripts": {
+    "check-types": "tsc --noEmit",
+    "eslint": "eslint test/**/*.ts",
+    "eslint:fix": "eslint test/**/*.ts --fix",
+    "format": "prettier --write 'test/**/*.{js,ts,json}'",
+    "lint": "npm-run-all eslint check-types",
+    "lint:fix": "npm-run-all eslint:fix check-types format",
     "test:e2e": "testcafe"
   },
   "repository": {
@@ -19,8 +25,13 @@
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "8.3.0",
     "jest": "^27.4.5",
     "nodemon": "^2.0.15",
+    "prettier": "2.5.1",
     "testcafe": "^1.18.1",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",

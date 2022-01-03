@@ -1,0 +1,8 @@
+/dist
+node_modules
+screenshots
+jest.config.js
+package-lock.json
+package.json
+tsconfig.eslint.json
+tsconfig.json

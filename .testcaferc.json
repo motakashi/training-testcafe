@@ -1,10 +1,10 @@
 {
   "browsers": ["chrome"],
   "src": "test/e2e/suits/*.test.ts",
-  "debugMode": true,
+  "debugMode": false,
   "screenshots": {
       "takeOnFails": true,
-      "pathPattern": "./Fail_${DATE}_${TIME}_${TEST_INDEX}_${USERAGENT}.png",
+      "pathPattern": "./Fail_${USERAGENT}.png",
       "thumbnails": false
   }
 }
