@@ -4,7 +4,6 @@ import { Login } from "../elements/login";
 import testId from "../user/testId";
 
 export async function ログインしていない状態のときログイン画面が表示されログインすることができる() {
-
   const elementLogin = new Login();
 
   await t
