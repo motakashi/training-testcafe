@@ -1,4 +1,4 @@
-import { t, Selector } from "testcafe";
+import { t } from "testcafe";
 import { Wallet } from "./../elements/wallet";
 import testData from "../data/testData";
 
@@ -27,4 +27,17 @@ export async function クレジットカードの金額指定ページのプル�
   const wallet = new Wallet();
   await t.expect(wallet.金額指定プルダウン最小値).eql("100");
   await t.expect(wallet.金額指定プルダウン最大値).eql("9000000");
+}
+
+export async function クレジットカードの金額指定ページの継続寄付ができないPJでは寄付回数の選択モジュールが非表示である() {
+  const wallet = new Wallet();
+  await t.expect(wallet.寄付の回数タイトル.exists).notOk();
+  await t.expect(wallet.都度寄付ラジオボタン.exists).notOk();
+  await t.expect(wallet.継続寄付ラジオボタン.exists).notOk();
+}
+
+export async function クレジットカードの金額指定ページの領収書発行ができないPJでは領収書モジュールが非表示である() {
+  const wallet = new Wallet();
+  await t.expect(wallet.領収書の発行をおこなっておりませんメッセージ.innerText).eql("※このプロジェクトでは領収書の発行をおこなっておりません。");
+  await t.expect(wallet.領収書は3000円以上から発行可能ですメッセージ.exists).notOk();
 }
