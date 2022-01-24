@@ -4,9 +4,9 @@ interface testData {
 }
 
 const testData: testData = {
-  projectId: "5102001",
+  projectId: "5166004",
   projectName:
-    "立体だから危険がわかる！\n段ボールジオラマの防災授業を子供たちへ",
+    "トンガ救援基金（日本財団）",
 };
 
 export default testData;
