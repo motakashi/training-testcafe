@@ -6,5 +6,6 @@
       "takeOnFails": true,
       "pathPattern": "./Fail_${USERAGENT}.png",
       "thumbnails": false
-  }
+  },
+  "skipJsErrors": true
 }
